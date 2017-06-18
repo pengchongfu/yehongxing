@@ -28,6 +28,17 @@ module.exports = {
     ** Run ESLINT on save
     */
     extend (config, ctx) {
+      for (var i = 0; i < config.module.rules.length; i++){
+        if (config.module.rules[i].test.source === "\\.css$") {
+          config.module.rules[i].include = /(node_modules)/
+          break;
+        }
+      }
+      config.module.rules.push({
+        test: /\.css$/,
+        use: [ 'vue-style-loader', 'css-loader?modules' ],
+        exclude: /(node_modules)/
+      })
       config.resolve.alias['nuxt-class-component'] = '~plugins/nuxt-class-component'
       if (ctx.isClient) {
         config.module.rules.push({
