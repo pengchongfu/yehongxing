@@ -8,9 +8,12 @@ module.exports = {
   extends: 'standard',
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html',
+    'vue'
   ],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'vue/jsx-uses-vars': 2
+  },
   globals: {}
 }

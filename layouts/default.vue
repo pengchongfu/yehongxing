@@ -1,8 +1,14 @@
-<template>
-  <div>
-    <nuxt/>
-  </div>
-</template>
+<script>
+import Header from '~components/Header'
 
-<style>
-</style>
+export default {
+  render () {
+    return (
+      <div>
+        <Header/>
+        <nuxt/>
+      </div>
+    )
+  }
+}
+</script>
