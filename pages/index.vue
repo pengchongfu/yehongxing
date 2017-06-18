@@ -1,11 +1,16 @@
-<template>
-  <div>
-    yehongxing
-  </div>
-</template>
-
 <script>
-export default {
+import Vue from 'vue'
+import Component from 'nuxt-class-component'
+
+@Component
+export default class Index extends Vue {
+  render () {
+    return (
+      <div>
+        yehongxing
+      </div>
+    )
+  }
 }
 </script>
 

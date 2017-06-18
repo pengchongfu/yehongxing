@@ -21,10 +21,14 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    babel: {
+      plugins: ['transform-decorators-legacy', 'transform-class-properties']
+    },
     /*
     ** Run ESLINT on save
     */
     extend (config, ctx) {
+      config.resolve.alias['nuxt-class-component'] = '~plugins/nuxt-class-component'
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
