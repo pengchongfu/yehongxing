@@ -5,7 +5,7 @@ import Component from 'nuxt-class-component'
 export default class Header extends Vue {
   render () {
     return (
-      <div>header</div>
+      <div class="container">header</div>
     )
   }
 }

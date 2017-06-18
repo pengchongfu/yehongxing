@@ -5,6 +5,7 @@
   "author": "pengchongfu <pengchongfu@gmail.com>",
   "private": true,
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
     "nuxt": "latest"
   },
   "scripts": {
