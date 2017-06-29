@@ -7,7 +7,9 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vue-motion": "^0.2.0",
+    "vue-no-ssr": "^0.1.2"
   },
   "scripts": {
     "dev": "nuxt",
