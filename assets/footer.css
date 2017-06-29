@@ -1,0 +1,23 @@
+.footer {
+  height: 60px;
+  line-height: 60px;
+  border-top: solid 1px #f0f0f0;
+}
+
+.copyright {
+  float: left;
+}
+
+.icons {
+  float: right;
+}
+
+.icon {
+  width: 30px;
+  text-align: center;
+  transition: all ease .3s;
+}
+
+.icon:hover {
+  font-size: 20px;
+}
