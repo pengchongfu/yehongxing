@@ -53,6 +53,7 @@ module.exports = {
   css: [
     'bootstrap/dist/css/bootstrap-reboot.min.css',
     'bootstrap/dist/css/bootstrap-grid.min.css',
+    'font-awesome/css/font-awesome.min.css',
     '~assets/app.css'
   ]
 }
