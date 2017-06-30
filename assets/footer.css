@@ -14,6 +14,7 @@
 
 .icon {
   width: 30px;
+  cursor: pointer;
   text-align: center;
   transition: all ease .3s;
 }

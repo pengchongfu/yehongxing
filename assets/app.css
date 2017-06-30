@@ -3,3 +3,12 @@
   font-size: 12px;
   color: #444;
 }
+
+a {
+  color: #444;
+}
+
+a:hover, a:focus {
+  color: #444;
+  text-decoration: none;
+}

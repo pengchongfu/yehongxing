@@ -19,12 +19,12 @@ export default class Header extends Vue {
         <div class="container">
           <div class={ styles.brand }>Ye HongXing</div>
           <ul class={ styles.list }>
-            <li>主页</li>
-            <li>作品</li>
-            <li>展览</li>
-            <li>工作室</li>
-            <li>关于</li>
-            <li>联系方式</li>
+            <li><nuxt-link to={ '/' }>主页</nuxt-link></li>
+            <li><nuxt-link to={ '/work' }>作品</nuxt-link></li>
+            <li><nuxt-link to={ '/exhibitions' }>展览</nuxt-link></li>
+            <li><nuxt-link to={ '/studio' }>工作室</nuxt-link></li>
+            <li><nuxt-link to={ '/about' }>关于</nuxt-link></li>
+            <li><nuxt-link to={ '/contact' }>联系方式</nuxt-link></li>
           </ul>
         </div>
       </div>

@@ -31,3 +31,16 @@
   padding: 0 25px;
   cursor: pointer;
 }
+
+.list li a {
+  color: #999;
+}
+
+.list li a:hover, a:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.list li a:global.nuxt-link-active {
+  color: #000;
+}
