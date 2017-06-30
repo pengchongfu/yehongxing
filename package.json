@@ -8,6 +8,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
     "nuxt": "latest",
+    "vue-i18n": "^7.0.3",
     "vue-motion": "^0.2.0",
     "vue-no-ssr": "^0.1.2"
   },

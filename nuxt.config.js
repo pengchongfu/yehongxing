@@ -48,12 +48,23 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vender: ['vue-i18n']
   },
   css: [
     'bootstrap/dist/css/bootstrap-reboot.min.css',
     'bootstrap/dist/css/bootstrap-grid.min.css',
     'font-awesome/css/font-awesome.min.css',
     '~assets/app.css'
-  ]
+  ],
+  router: {
+    middleware: 'i18n'
+  },
+  plugins: ['~plugins/i18n.js'],
+  generate: {
+    routes: [
+      '/zh',
+      '/zh/contact'
+    ]
+  }
 }

@@ -1,18 +1,4 @@
 <script>
-import Vue from 'vue'
-import Component from 'nuxt-class-component'
-
-@Component
-export default class Index extends Vue {
-  render () {
-    return (
-      <div>
-        yehongxing
-      </div>
-    )
-  }
-}
+import Index from '~pages/_lang/index'
+export default Index
 </script>
-
-<style>
-</style>
