@@ -1,0 +1,5 @@
+.default {
+  min-height: calc(100vh - 61px);
+  width: 100%;
+  overflow-x: hidden;
+}
