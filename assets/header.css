@@ -44,3 +44,13 @@
 .list li a:global.nuxt-link-active {
   color: #000;
 }
+
+.locale {
+  float: right;
+  cursor: pointer;
+  color: #999;
+}
+
+.active {
+  color: #000;
+}
