@@ -1,0 +1,41 @@
+.gallery {
+  height: 450px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.item {
+  display: inline-block;
+  transition: all ease .3s;
+}
+
+.item img {
+  height: 450px;
+}
+
+.arrow {
+  color: #fff;
+  top: 50%;
+  position: absolute;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: -45px;
+  transition: background-color ease .3s;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pre {
+  composes: arrow;
+  left: 0;
+  padding: 20px 20px 20px 15px;
+}
+
+.next {
+  composes: arrow;
+  right: 0;
+  padding: 20px 15px 20px 20px;
+}
