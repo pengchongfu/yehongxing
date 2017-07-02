@@ -2,27 +2,20 @@ import Vue from 'vue'
 import Component from 'nuxt-class-component'
 
 import styles from '~assets/gallery.css'
-import GalleryItem from './GalleryItem'
 
 @Component({
-  props: {
-    list: {
-      type: Array,
-      default: _ => []
-    }
-  },
   watch: {
     centeredIndex (val) {
       let length = 0
-      for (let i = 0; i < this.list.length; i++) {
-        length += this.$refs[`item-${i}`].$el.offsetWidth
+      for (let i = 0; i < this.items.length; i++) {
+        length += this.items[i].$el.offsetWidth
       }
       length = length - this.$refs.gallery.offsetWidth
       let translateX = 0
       for (let i = 0; i < val; i++) {
-        translateX -= this.$refs[`item-${i}`].$el.offsetWidth
+        translateX -= this.items[i].$el.offsetWidth
       }
-      translateX = translateX + this.$refs.gallery.offsetWidth / 2 - this.$refs[`item-${val}`].$el.offsetWidth / 2
+      translateX = translateX + this.$refs.gallery.offsetWidth / 2 - this.items[val].$el.offsetWidth / 2
       if (translateX < -length) {
         this.translateX = -length
       } else if (translateX > 0) {
@@ -30,40 +23,37 @@ import GalleryItem from './GalleryItem'
       } else {
         this.translateX = translateX
       }
+      this.anime()
     }
   }
 })
 export default class Gallery extends Vue {
   centeredIndex = 0
   translateX = 0
+  items = []
   pre () {
     if (this.centeredIndex === 0) {
-      this.centeredIndex = this.list.length - 1
+      this.centeredIndex = this.items.length - 1
     } else {
       this.centeredIndex--
     }
   }
   next () {
-    if (this.centeredIndex === this.list.length - 1) {
+    if (this.centeredIndex === this.items.length - 1) {
       this.centeredIndex = 0
     } else {
       this.centeredIndex++
     }
   }
-  render () {
-    const items = this.list.map((item, index) => {
-      return (
-        <GalleryItem
-        ref={ `item-${index}` }
-        translateX={ this.translateX }
-        >
-          <img src={ item } />
-        </GalleryItem>
-      )
+  anime () {
+    this.items.forEach((item) => {
+      item.translateX = this.translateX
     })
+  }
+  render () {
     return (
       <div ref="gallery" class={ styles.gallery }>
-        { items }
+        { this.$slots.default }
         <div class={ styles.pre } on-click={ this.pre }>
           <i class="fa fa-angle-left" aria-hidden="true"></i>
         </div>
@@ -72,5 +62,9 @@ export default class Gallery extends Vue {
         </div>
       </div>
     )
+  }
+  mounted () {
+    this.items = this.$children.filter(child => child.$options.name === 'GalleyItem')
+    this.anime()
   }
 }

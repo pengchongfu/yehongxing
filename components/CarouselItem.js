@@ -3,7 +3,9 @@ import Component from 'nuxt-class-component'
 
 import styles from '~assets/carousel.css'
 
-@Component
+@Component({
+  name: 'CarouselItem'
+})
 export default class CarouselItem extends Vue {
   translateX = 0
   zIndex = 0
