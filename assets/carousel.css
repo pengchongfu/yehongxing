@@ -1,0 +1,65 @@
+.carousel {
+
+}
+
+.container {
+  position: relative;
+  height: 450px;
+  cursor: pointer;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s ease-in-out;
+}
+
+.indicators {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.indicator {
+  list-style: none;
+  padding: 12px 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.indicator div {
+  width: 30px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.indicator:global.active div {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pre {
+  composes: pre from "./gallery.css";
+  z-index: 2;
+  opacity: 0;
+  left: -30px;
+  transition: all ease .3s;
+}
+
+.next {
+  composes: next from "./gallery.css";
+  z-index: 2;
+  opacity: 0;
+  right: -30px;
+  transition: all ease .3s;
+}
+
+.pre:global.hover {
+  opacity: 1;
+  left: 0;
+}
+
+.next:global.hover {
+  opacity: 1;
+  right: 0;
+}
