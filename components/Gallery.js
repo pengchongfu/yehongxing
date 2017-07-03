@@ -12,6 +12,10 @@ import styles from '~assets/gallery.css'
     size: {
       type: String,
       default: 'large'
+    },
+    parentIndex: {
+      type: Number,
+      default: 0
     }
   },
   watch: {
@@ -35,6 +39,9 @@ import styles from '~assets/gallery.css'
       }
       this.anime()
       this.$emit('change', val)
+    },
+    parentIndex (val) {
+      this.centeredIndex = val
     }
   }
 })

@@ -71,3 +71,26 @@
 .imgWrapper {
   margin: auto;
 }
+
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider img {
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.pre {
+  composes: pre from './gallery.css';
+  left: 2%;
+}
+
+.next {
+  composes: next from './gallery.css';
+  right: 2%;
+}
