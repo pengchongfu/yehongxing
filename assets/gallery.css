@@ -1,16 +1,17 @@
 .gallery {
-  height: 450px;
   white-space: nowrap;
   position: relative;
+  overflow: hidden;
 }
 
 .item {
   display: inline-block;
+  height: 100%;
   transition: all ease .3s;
 }
 
 .item img {
-  height: 450px;
+  height: 100%;
 }
 
 .arrow {
@@ -38,4 +39,8 @@
   composes: arrow;
   right: 0;
   padding: 20px 15px 20px 20px;
+}
+
+.centered {
+  opacity: 0.3;
 }

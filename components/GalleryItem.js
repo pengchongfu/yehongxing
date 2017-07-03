@@ -13,10 +13,16 @@ export default class GalleyItem extends Vue {
     const index = parent.items.indexOf(this)
     parent.centeredIndex = index
   }
+  get centered () {
+    if (this.$parent.size === 'large') {
+      return false
+    }
+    return this.$parent.items.indexOf(this) === this.$parent.centeredIndex
+  }
   render () {
     return (
       <div
-      class={ styles.item }
+      class={ `${styles.item} ${this.centered ? styles.centered : ''}` }
       style={{transform: `translateX(${this.translateX}px)`}}
       on-click={ this.handleClick }
       >

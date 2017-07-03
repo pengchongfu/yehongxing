@@ -4,6 +4,16 @@ import Component from 'nuxt-class-component'
 import styles from '~assets/gallery.css'
 
 @Component({
+  props: {
+    height: {
+      type: Number,
+      default: 450
+    },
+    size: {
+      type: String,
+      default: 'large'
+    }
+  },
   watch: {
     centeredIndex (val) {
       let length = 0
@@ -24,6 +34,7 @@ import styles from '~assets/gallery.css'
         this.translateX = translateX
       }
       this.anime()
+      this.$emit('change', val)
     }
   }
 })
@@ -52,7 +63,7 @@ export default class Gallery extends Vue {
   }
   render () {
     return (
-      <div ref="gallery" class={ styles.gallery }>
+      <div ref="gallery" class={ styles.gallery } style={ `height: ${this.height}px` }>
         { this.$slots.default }
         <div class={ styles.pre } on-click={ this.pre }>
           <i class="fa fa-angle-left" aria-hidden="true"></i>
