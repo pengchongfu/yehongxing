@@ -5,7 +5,7 @@
   width: 100%;
   background-color: #fff;
   transition: all ease .5s;
-  z-index: 3;
+  z-index: 10;
 }
 
 .small {
