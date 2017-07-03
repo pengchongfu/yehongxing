@@ -1,3 +1,61 @@
 .work {
-  
+}
+
+.item {
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  color: transparent;
+  font-size: 20px;
+  transition: all ease 1s;
+}
+
+.item a:hover .info {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: all ease 1s;
+}
+
+.item a:hover .img {
+  transform: scale(1.2);
+}
+
+.sculpture {
+  composes: img;
+  background-image: url('/images/work/sculpture/1.jpg');
+}
+
+.oil {
+  composes: img;
+  background-image: url('/images/work/oil/1.jpg');
+}
+
+.detail {
 }

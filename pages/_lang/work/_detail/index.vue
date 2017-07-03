@@ -5,11 +5,11 @@ import Component from 'nuxt-class-component'
 import styles from '~assets/work.css'
 
 @Component
-export default class Work extends Vue {
+export default class Detail extends Vue {
   render () {
     return (
-      <div class={ styles.work }>
-        work
+      <div class={ styles.detail }>
+        detail
       </div>
     )
   }
