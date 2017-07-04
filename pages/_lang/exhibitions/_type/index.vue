@@ -13,20 +13,22 @@ export default class Exhibitions extends Vue {
     }
   }
   render () {
-    const items = this.list.map(item => {
+    const items = this.list.map((item, index) => {
       return (
-        <div class={ styles.item }>
-          <div class={ styles.itemContent }>
-            <img class={ styles.itemImg } src={ item.img }/>
-            <div class={ styles.itemText }>
-              <div class={ styles.itemName }>{ item.name }</div>
-              <div class={ styles.itemTime }>{ item.time }</div>
-            </div>
-            <div class={ styles.itemNext }>
-              <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <nuxt-link to={ `${this.$route.path}/${this.list.length - index}` }>
+          <div class={ styles.item }>
+            <div class={ styles.itemContent }>
+              <img class={ styles.itemImg } src={ item.img }/>
+              <div class={ styles.itemText }>
+                <div class={ styles.itemName }>{ item.name }</div>
+                <div class={ styles.itemTime }>{ item.time }</div>
+              </div>
+              <div class={ styles.itemNext }>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
-        </div>
+        </nuxt-link>
       )
     })
     return (
