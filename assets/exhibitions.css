@@ -1,3 +1,63 @@
 .exhibitions {
 
 }
+
+.item {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+  cursor: pointer;
+  transition: background-color ease .3s;
+}
+
+.item:hover {
+  background-color: #fbfbfb;
+}
+
+.item:hover .itemContent {
+  transform: translateX(-30px);
+}
+
+.itemContent {
+  width: 600px;
+  height: 120px;
+  margin: auto;
+  padding-top: 20px;
+  overflow: hidden;
+  transition: transform ease .6s;
+}
+
+.itemImg {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.itemText {
+  width: 50%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.itemName {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.itemTime {
+  color: #999;
+}
+
+.itemNext {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  opacity: 0;
+  transition: transform ease .3s, opacity ease .3s;
+}
+
+.item:hover .itemNext {
+  transform: translateX(30px);
+  opacity: 1;
+}

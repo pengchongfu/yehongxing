@@ -1,3 +1,5 @@
+var path = require('path')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -40,6 +42,7 @@ module.exports = {
         exclude: /(node_modules)/
       })
       config.resolve.alias['nuxt-class-component'] = '~plugins/nuxt-class-component'
+      config.resolve.alias['~data'] = path.join(__dirname, 'data')
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
