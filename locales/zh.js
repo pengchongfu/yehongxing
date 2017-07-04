@@ -5,7 +5,9 @@ module.exports = {
     exhibitions: '展览',
     studio: '工作室',
     about: '关于',
-    contact: '联系方式'
+    contact: '联系方式',
+    solo: '个展',
+    group: '联展'
   },
   about: {
     name: '叶红杏 RedXing',

@@ -29,12 +29,18 @@ export default class Header extends Vue {
         <div class="container">
           <div class={ styles.brand }>Ye HongXing</div>
           <ul class={ styles.list }>
-            <li><nuxt-link to={ `/${this.$i18n.locale}` }>{ this.$t('header.index') }</nuxt-link></li>
-            <li><nuxt-link to={ `/${this.$i18n.locale}/work` }>{ this.$t('header.work') }</nuxt-link></li>
-            <li><nuxt-link to={ `/${this.$i18n.locale}/exhibitions` }>{ this.$t('header.exhibitions') }</nuxt-link></li>
-            <li><nuxt-link to={ `/${this.$i18n.locale}/studio` }>{ this.$t('header.studio') }</nuxt-link></li>
-            <li><nuxt-link to={ `/${this.$i18n.locale}/about` }>{ this.$t('header.about') }</nuxt-link></li>
-            <li><nuxt-link to={ `/${this.$i18n.locale}/contact` }>{ this.$t('header.contact') }</nuxt-link></li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}` }>{ this.$t('header.index') }</nuxt-link></li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/work` }>{ this.$t('header.work') }</nuxt-link></li>
+            <li class={ styles.listItem }>
+              <nuxt-link to={ `/${this.$i18n.locale}/exhibitions/solo` }>{ this.$t('header.exhibitions') }</nuxt-link>
+              <ul class={ styles.sublist }>
+                <li><nuxt-link to={ `/${this.$i18n.locale}/exhibitions/solo` }>{ this.$t('header.solo') }</nuxt-link></li>
+                <li><nuxt-link to={ `/${this.$i18n.locale}/exhibitions/group` }>{ this.$t('header.group') }</nuxt-link></li>
+              </ul>
+            </li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/studio` }>{ this.$t('header.studio') }</nuxt-link></li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/about` }>{ this.$t('header.about') }</nuxt-link></li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/contact` }>{ this.$t('header.contact') }</nuxt-link></li>
           </ul>
           <div class={ styles.locale }>
             <span class={ this.$i18n.locale === 'en' ? styles.active : null } on-click={ _ => { this.route('en') } }>En</span>

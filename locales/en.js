@@ -1,11 +1,13 @@
 module.exports = {
   header: {
-    index: 'home',
-    work: 'work',
-    exhibitions: 'exhibitions',
-    studio: 'studio',
-    about: 'about',
-    contact: 'contact'
+    index: 'Home',
+    work: 'Work',
+    exhibitions: 'Exhibitions',
+    studio: 'Studio',
+    about: 'About',
+    contact: 'Contact',
+    solo: 'Solo',
+    group: 'Group'
   },
   about: {
     name: 'Ye Hongxing （RedXing）',
