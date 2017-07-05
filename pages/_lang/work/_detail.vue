@@ -6,6 +6,7 @@ import styles from '~assets/work.css'
 import Gallery from '~components/Gallery'
 import GalleryItem from '~components/GalleryItem'
 import Modal from '~components/Modal'
+import ImageGallery from '~components/ImageGallery'
 
 const listMap = {
   oil: [
@@ -28,35 +29,11 @@ const listMap = {
   ]
 }
 
-import NoSSR from 'vue-no-ssr'
-if (process.BROWSER_BUILD) {
-  var Motion = require('vue-motion').Motion
-}
-
-@Component({
-  watch: {
-    currentIndex () {
-      this.$nextTick(this.resize)
-    }
-  }
-})
+@Component
 export default class Detail extends Vue {
   list = []
   currentIndex = 0
-  height = 0
-  width = 0
   visible = false
-  resize () {
-    const height = this.$refs.img.naturalHeight
-    const width = this.$refs.img.naturalWidth
-    if (height > width) {
-      this.height = 500
-      this.width = 500 * width / height
-    } else {
-      this.height = 500 * height / width
-      this.width = 500
-    }
-  }
   handleModal (val) {
     switch (val) {
       case 'close':
@@ -90,24 +67,7 @@ export default class Detail extends Vue {
     return (
       <div class={ styles.detail }>
         <div class="container">
-          <div class={ styles.currentImg }>
-            <NoSSR>
-              <Motion
-              values={{
-                height: this.height,
-                width: this.width
-              }}
-              tag="div"
-              scopedSlots={
-              {
-                default: (props) => {
-                  return <div on-click={ _ => { this.visible = true } } style={{height: props.height + 'px', width: props.width + 'px'}} class={ styles.imgWrapper }>
-                    <img style={{height: props.height + 'px', width: props.width + 'px'}} ref="img" src={ this.list[this.currentIndex] }/>
-                  </div>
-                }
-              }}/>
-            </NoSSR>
-          </div>
+          <ImageGallery currentIndex={ this.currentIndex } list={ this.list } on-click={ _ => { this.visible = true } } />
           <Gallery height={ 100 } size="small" on-change={ val => { this.currentIndex = val } } parentIndex={ this.currentIndex }>
           { items }
           </Gallery>
@@ -132,9 +92,6 @@ export default class Detail extends Vue {
     this.list = listMap[this.$route.params.detail].map(item => {
       return `/images/work/${this.$route.params.detail}/${item}`
     })
-  }
-  mounted () {
-    this.$nextTick(this.resize)
   }
 }
 </script>

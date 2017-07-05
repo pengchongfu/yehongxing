@@ -1,0 +1,18 @@
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgItem {
+  height: 100%;
+  vertical-align: top;
+}
+
+.imgWrapper {
+  overflow: hidden;
+}
+
+.imgs {
+  white-space: nowrap;
+}
