@@ -43,6 +43,7 @@ module.exports = {
       })
       config.resolve.alias['nuxt-class-component'] = '~plugins/nuxt-class-component'
       config.resolve.alias['~data'] = path.join(__dirname, 'data')
+      config.resolve.alias['~utils'] = path.join(__dirname, 'utils')
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

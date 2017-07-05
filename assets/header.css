@@ -23,14 +23,11 @@
 
 .list {
   float: left;
-  padding: 0;
 }
 
 .listItem {
-  list-style: none;
   float: left;
   padding: 0 25px;
-  cursor: pointer;
   position: relative;
 }
 
@@ -65,7 +62,6 @@
 
 .sublist {
   position: absolute;
-  padding: 0;
   top: 100%;
   left: 0;
   width: 100%;
@@ -79,7 +75,6 @@
 }
 
 .sublist li {
-  list-style: none;
   line-height: 20px;
   padding: 5px 25px;
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
