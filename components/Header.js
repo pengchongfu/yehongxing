@@ -40,7 +40,6 @@ export default class Header extends Vue {
             </li>
             <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/studio` }>{ this.$t('header.studio') }</nuxt-link></li>
             <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/about` }>{ this.$t('header.about') }</nuxt-link></li>
-            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/contact` }>{ this.$t('header.contact') }</nuxt-link></li>
           </ul>
           <div class={ styles.locale }>
             <span class={ this.$i18n.locale === 'en' ? styles.active : null } on-click={ _ => { this.route('en') } }>En</span>

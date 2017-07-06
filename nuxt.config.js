@@ -67,8 +67,7 @@ module.exports = {
   plugins: ['~plugins/i18n.js'],
   generate: {
     routes: [
-      '/zh',
-      '/zh/contact'
+      '/zh'
     ]
   }
 }

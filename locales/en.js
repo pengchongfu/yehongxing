@@ -5,7 +5,6 @@ module.exports = {
     exhibitions: 'Exhibitions',
     studio: 'Studio',
     about: 'About',
-    contact: 'Contact',
     solo: 'Solo',
     group: 'Group'
   },
