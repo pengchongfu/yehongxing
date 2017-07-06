@@ -4,7 +4,17 @@ const solo = [
     name: '曼陀罗. 馥郁年华—叶红杏个展',
     place: '三里屯瑜舍酒店',
     city: '北京',
-    img: '/images/exhibitions/1.jpg'
+    img: '/images/exhibitions/1.jpg',
+    images: [
+      '/images/exhibitions/1.jpg',
+      '/images/exhibitions/2.jpg',
+      '/images/exhibitions/3.jpg',
+      '/images/exhibitions/4.jpg',
+      '/images/exhibitions/4.jpg',
+      '/images/exhibitions/3.jpg',
+      '/images/exhibitions/2.jpg',
+      '/images/exhibitions/1.jpg'
+    ]
   },
   {
     time: 2016,

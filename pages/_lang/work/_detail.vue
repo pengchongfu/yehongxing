@@ -8,26 +8,7 @@ import GalleryItem from '~components/GalleryItem'
 import Modal from '~components/Modal'
 import ImageGallery from '~components/ImageGallery'
 
-const listMap = {
-  oil: [
-    '1.jpg',
-    '2.jpg'
-  ],
-  sculpture: [
-    '1.jpg',
-    '2.jpg',
-    '1.jpg',
-    '2.jpg',
-    '1.jpg',
-    '2.jpg',
-    '1.jpg',
-    '2.jpg',
-    '1.jpg',
-    '2.jpg',
-    '1.jpg',
-    '2.jpg'
-  ]
-}
+import listMap from '~data/work.js'
 
 @Component
 export default class Detail extends Vue {
@@ -55,7 +36,12 @@ export default class Detail extends Vue {
       this.currentIndex++
     }
   }
-  render () {
+  getData () {
+    this.list = listMap[this.$route.params.detail].map(item => {
+      return `/images/work/${this.$route.params.detail}/${item}`
+    })
+  }
+  r (vnode) {
     const items = this.list.map((item, index) => {
       return (
         <GalleryItem
@@ -67,6 +53,7 @@ export default class Detail extends Vue {
     return (
       <div class={ styles.detail }>
         <div class="container">
+          { vnode }
           <ImageGallery currentIndex={ this.currentIndex } list={ this.list } on-click={ _ => { this.visible = true } } />
           <Gallery height={ 100 } size="small" on-change={ val => { this.currentIndex = val } } parentIndex={ this.currentIndex }>
           { items }
@@ -88,10 +75,11 @@ export default class Detail extends Vue {
       </div>
     )
   }
+  render () {
+    return this.r()
+  }
   created () {
-    this.list = listMap[this.$route.params.detail].map(item => {
-      return `/images/work/${this.$route.params.detail}/${item}`
-    })
+    this.getData()
   }
 }
 </script>
