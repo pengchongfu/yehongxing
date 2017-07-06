@@ -1,4 +1,36 @@
 var path = require('path')
+var work = require('./data/work')
+var exhibitions = require('./data/exhibitions')
+
+var basicRoute = [
+  '',
+  'work',
+  'studio',
+  'about',
+]
+
+var workRoutes = []
+Object.keys(work).map(key => {
+  workRoutes.push(path.join('/work', key))
+})
+
+var exhibitionsRoutes = []
+Object.keys(exhibitions).map(key => {
+  exhibitionsRoutes.push(path.join('/exhibitions', key))
+  for (var i = 1; i <= exhibitions[key].length; i++) {
+    exhibitionsRoutes.push(path.join('/exhibitions', key, String(i)))
+  }
+})
+
+basicRoute = basicRoute.concat(workRoutes, exhibitionsRoutes)
+
+var routes = []
+var locales = ['/zh', '/en']
+locales.map(locale => {
+  routes = routes.concat(basicRoute.map(item => {
+    return path.join(locale, item)
+  }))
+})
 
 module.exports = {
   /*
@@ -66,8 +98,6 @@ module.exports = {
   },
   plugins: ['~plugins/i18n.js'],
   generate: {
-    routes: [
-      '/zh'
-    ]
+    routes
   }
 }

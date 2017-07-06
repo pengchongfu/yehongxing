@@ -50,6 +50,9 @@ export default class Gallery extends Vue {
   translateX = 0
   items = []
   pre () {
+    if (this.items.length === 0) {
+      return
+    }
     if (this.centeredIndex === 0) {
       this.centeredIndex = this.items.length - 1
     } else {
@@ -57,6 +60,9 @@ export default class Gallery extends Vue {
     }
   }
   next () {
+    if (this.items.length === 0) {
+      return
+    }
     if (this.centeredIndex === this.items.length - 1) {
       this.centeredIndex = 0
     } else {

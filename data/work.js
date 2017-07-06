@@ -18,7 +18,7 @@ const sculpture = [
   '2.jpg'
 ]
 
-export default {
+module.exports = {
   oil,
   sculpture
 }
