@@ -7,7 +7,7 @@ import styles from '~assets/footer.css'
 export default class Footer extends Vue {
   render () {
     return (
-      <div class={ styles.footer }>
+      <footer class={ styles.footer }>
         <div class="container">
           <div class={ styles.copyright }>
             ©2017 { this.$t('about.name') }
@@ -17,7 +17,7 @@ export default class Footer extends Vue {
             <i class={ `fa fa-twitter ${styles.icon}` } aria-hidden="true"></i>
           </div>
         </div>
-      </div>
+      </footer>
     )
   }
 }

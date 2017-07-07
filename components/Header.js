@@ -25,7 +25,7 @@ export default class Header extends Vue {
   }
   render () {
     return (
-      <div class={ `${styles.header} ${this.small ? styles.small : null}` }>
+      <header class={ `${styles.header} ${this.small ? styles.small : null}` }>
         <div class="container">
           <nuxt-link to={ `/${this.$i18n.locale}` }><div class={ styles.brand }>{ this.$t('about.name') }</div></nuxt-link>
           <ul class={ styles.list }>
@@ -47,7 +47,7 @@ export default class Header extends Vue {
             <span class={ this.$i18n.locale === 'zh' ? styles.active : null } on-click={ _ => { this.route('zh') } }>中文</span>
           </div>
         </div>
-      </div>
+      </header>
     )
   }
   mounted () {
