@@ -10,7 +10,7 @@ export default class Footer extends Vue {
       <div class={ styles.footer }>
         <div class="container">
           <div class={ styles.copyright }>
-            ©2017 Ye HongXing
+            ©2017 { this.$t('about.name') }
           </div>
           <div class={ styles.icons }>
             <i class={ `fa fa-facebook ${styles.icon}` } aria-hidden="true"></i>

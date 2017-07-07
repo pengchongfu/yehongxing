@@ -1,10 +1,19 @@
 const solo = [
   {
     time: 2017,
-    name: '曼陀罗. 馥郁年华—叶红杏个展',
-    place: '三里屯瑜舍酒店',
-    city: '北京',
-    img: '/images/exhibitions/1.jpg',
+    name: {
+      zh: '曼陀罗. 馥郁年华—叶红杏个展',
+      en: 'Prajñāpāramitā Ye Hongxing - Solo Exhibition'
+    },
+    place: {
+      zh: '三里屯瑜舍酒店',
+      en: 'The opposite house'
+    },
+    city: {
+      zh: '北京',
+      en: 'Beijing'
+    },
+    image: '/images/exhibitions/1.jpg',
     images: [
       '/images/exhibitions/1.jpg',
       '/images/exhibitions/2.jpg',
@@ -18,58 +27,121 @@ const solo = [
   },
   {
     time: 2016,
-    name: '堆积的沉默 叶红杏个展',
-    place: 'Art+shanghai 画廊',
-    city: '上海',
-    img: '/images/exhibitions/2.jpg',
+    name: {
+      zh: '堆积的沉默 叶红杏个展',
+      en: 'The Accumulation of Silence Ye Hongxing - Solo Exhibition'
+    },
+    place: {
+      zh: 'Art+shanghai 画廊',
+      en: 'Art＋Shanghai'
+    },
+    city: {
+      zh: '上海',
+      en: 'Shanghai'
+    },
+    image: '/images/exhibitions/2.jpg',
     images: []
   },
   {
     time: 2015,
-    name: '耀眼的世界 叶红杏个展',
-    place: 'ArtLexing',
-    city: '迈阿密',
-    img: '/images/exhibitions/3.jpg',
+    name: {
+      zh: '耀眼的世界 叶红杏个展',
+      en: 'The Dazzling World Of Ye Hongxing'
+    },
+    place: {
+      zh: 'ArtLexing',
+      en: 'ArtLexing'
+    },
+    city: {
+      zh: '迈阿密',
+      en: 'Miami'
+    },
+    image: '/images/exhibitions/3.jpg',
     images: []
   },
   {
     time: 2014,
-    name: '幻工厂 叶红杏个展',
-    place: 'Art+shanghai 画廊',
-    city: '上海',
-    img: '/images/exhibitions/4.jpg',
+    name: {
+      zh: '幻工厂 叶红杏个展',
+      en: 'The Fantasy Factory Ye Hongxing - Solo Exhibition'
+    },
+    place: {
+      zh: 'Art+shanghai 画廊',
+      en: 'Art＋Shanghai'
+    },
+    city: {
+      zh: '上海',
+      en: 'Shanghai'
+    },
+    image: '/images/exhibitions/4.jpg',
     images: []
   },
   {
     time: 2014,
-    name: '叶红杏个展',
-    place: 'Zee Stone 画廊',
-    city: '香港',
-    img: '/images/exhibitions/1.jpg',
+    name: {
+      zh: '叶红杏个展',
+      en: 'Ye Hongxing - Solo Exhibition'
+    },
+    place: {
+      zh: 'Zee Stone 画廊',
+      en: 'Zee Stone Gallery'
+    },
+    city: {
+      zh: '香港',
+      en: 'HongKong'
+    },
+    image: '/images/exhibitions/1.jpg',
     images: []
   },
   {
     time: 2013,
-    name: '东方伊甸园 叶红杏个展',
-    place: 'Scream画廊',
-    city: '伦敦',
-    img: '/images/exhibitions/2.jpg',
+    name: {
+      zh: '东方伊甸园 叶红杏个展',
+      en: 'East of Eden, Ye Hongxing Solo Exhibition'
+    },
+    place: {
+      zh: 'Scream画廊',
+      en: 'Scream'
+    },
+    city: {
+      zh: '伦敦',
+      en: 'London'
+    },
+    image: '/images/exhibitions/2.jpg',
     images: []
   },
   {
     time: 2013,
-    name: '叶红杏 秦伟鸿 双个展',
-    place: 'Christian Louboutin',
-    city: '香港',
-    img: '/images/exhibitions/3.jpg',
+    name: {
+      zh: '叶红杏 秦伟鸿 双个展',
+      en: 'Ye Hongxing &amp; Quin Weihong'
+    },
+    place: {
+      zh: 'Christian Louboutin',
+      en: 'Christian Louboutin'
+    },
+    city: {
+      zh: '香港',
+      en: 'HongKong'
+    },
+    image: '/images/exhibitions/3.jpg',
     images: []
   },
   {
     time: 2013,
-    name: '天堂之城－叶红杏个展',
-    place: 'Art+shanghai 画廊',
-    city: '上海',
-    img: '/images/exhibitions/4.jpg',
+    name: {
+      zh: '天堂之城－叶红杏个展',
+      en: 'Paradise City Ye Hongxing - Solo Exhibition'
+    },
+    place: {
+      zh: 'Art+shanghai 画廊',
+      en: 'Art＋Shanghai'
+    },
+    city: {
+      zh: '上海',
+      en: 'Shanghai'
+    },
+    image: '/images/exhibitions/4.jpg',
     images: []
   }
 ]
@@ -77,10 +149,19 @@ const solo = [
 const group = [
   {
     time: 2017,
-    name: 'Art Central 艺术博览会',
-    place: 'Art＋Sanghai',
-    city: '香港',
-    img: '/images/exhibitions/1.jpg',
+    name: {
+      zh: 'Art Central 艺术博览会',
+      en: 'Art Central'
+    },
+    place: {
+      zh: 'Art＋Shanghai',
+      en: 'Art＋Shanghai'
+    },
+    city: {
+      zh: '香港',
+      en: 'HongKong'
+    },
+    image: '/images/exhibitions/1.jpg',
     images: []
   }
 ]

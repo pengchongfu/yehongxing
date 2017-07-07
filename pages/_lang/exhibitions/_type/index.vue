@@ -32,7 +32,7 @@ export default class Exhibitions extends Vue {
       return b.value - a.value
     })
     ans.unshift({
-      label: 'All Time',
+      label: this.$t('words.allTime'),
       value: ''
     })
     return ans
@@ -52,9 +52,9 @@ export default class Exhibitions extends Vue {
         <nuxt-link to={ {name: 'lang-exhibitions-type-detail', params: {type: this.$route.params.type, detail: this.list.length - this.list.indexOf(item)}} }>
           <div class={ styles.item }>
             <div class={ styles.itemContent }>
-              <img class={ styles.itemImg } src={ item.img }/>
+              <img class={ styles.itemImg } src={ item.image }/>
               <div class={ styles.itemText }>
-                <div class={ styles.itemName }>{ item.name }</div>
+                <div class={ styles.itemName }>{ item.name[this.$i18n.locale] }</div>
                 <div class={ styles.itemTime }>{ item.time }</div>
               </div>
               <div class={ styles.itemNext }>

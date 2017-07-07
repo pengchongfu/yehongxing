@@ -18,10 +18,10 @@ export default class Detail extends Vue {
   }
   render () {
     let vnode = <div class={ styles.detailMeta }>
-      <div class={ styles.detailName }>{ this.meta.name }</div>
+      <div class={ styles.detailName }>{ this.meta.name[this.$i18n.locale] }</div>
       <div class={ styles.detailTime }>{ this.meta.time }</div>
       <div class={ styles.detailPlace }>
-        <span>{ this.meta.place }</span> <span>{ this.meta.city }</span>
+        <span>{ this.meta.place[this.$i18n.locale] }</span> <span>{ this.meta.city[this.$i18n.locale] }</span>
       </div>
     </div>
     return this.r(vnode)

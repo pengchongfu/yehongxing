@@ -18,7 +18,7 @@
   float: left;
   color: #ff0000;
   font-size: 20px;
-  margin-right: 60px;
+  width: 250px;
 }
 
 .list {
@@ -29,6 +29,8 @@
   float: left;
   padding: 0 25px;
   position: relative;
+  text-align: center;
+  width: 120px;
 }
 
 .listItem a {

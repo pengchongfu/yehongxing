@@ -27,7 +27,7 @@ export default class Header extends Vue {
     return (
       <div class={ `${styles.header} ${this.small ? styles.small : null}` }>
         <div class="container">
-          <div class={ styles.brand }>Ye HongXing</div>
+          <nuxt-link to={ `/${this.$i18n.locale}` }><div class={ styles.brand }>{ this.$t('about.name') }</div></nuxt-link>
           <ul class={ styles.list }>
             <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}` }>{ this.$t('header.index') }</nuxt-link></li>
             <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/work` }>{ this.$t('header.work') }</nuxt-link></li>
