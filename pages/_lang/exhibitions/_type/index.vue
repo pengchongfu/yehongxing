@@ -49,7 +49,7 @@ export default class Exhibitions extends Vue {
   render () {
     const items = this.listShow.map((item) => {
       return (
-        <nuxt-link to={ {name: 'lang-exhibitions-type-detail', params: {type: this.$route.params.type, detail: this.list.length - this.list.indexOf(item)}} }>
+        <nuxt-link to={ {name: 'lang-exhibitions-type-detail', params: {lang: this.$i18n.locale, type: this.$route.params.type, detail: this.list.length - this.list.indexOf(item)}} }>
           <div class={ styles.item }>
             <div class={ styles.itemContent }>
               <img class={ styles.itemImg } src={ item.image }/>

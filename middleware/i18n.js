@@ -7,6 +7,10 @@ export default function ({ app, store, route, params, error, redirect, hotReload
   store.commit('SET_LANG', locale)
   app.i18n.locale = store.state.locale
   if (locale === 'en' && route.fullPath.indexOf('/en') === 0) {
-    return redirect(route.fullPath.replace(/^\/en/, '/'))
+    let redirectPath = route.fullPath.replace(/^\/en/, '')
+    if (redirectPath === '') {
+      redirectPath = '/'
+    }
+    return redirect(redirectPath)
   }
 }
