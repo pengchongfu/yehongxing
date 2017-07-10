@@ -1,4 +1,7 @@
 module.exports = {
+  head: {
+    description: '叶红杏的网站'
+  },
   header: {
     index: '主页',
     work: '作品',

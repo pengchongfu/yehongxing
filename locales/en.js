@@ -1,4 +1,7 @@
 module.exports = {
+  head: {
+    description: "Ye Hongxing's website"
+  },
   header: {
     index: 'Home',
     work: 'Work',
