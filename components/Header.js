@@ -6,6 +6,7 @@ import styles from '~assets/header.css'
 @Component
 export default class Header extends Vue {
   small = false
+  show = false
   onscroll () {
     if (document.body.scrollTop > 80) {
       this.small = true
@@ -28,24 +29,29 @@ export default class Header extends Vue {
       <header class={ `${styles.header} ${this.small ? styles.small : null}` }>
         <div class="container">
           <nuxt-link to={ `/${this.$i18n.locale}` }><div class={ styles.brand }>{ this.$t('about.name') }</div></nuxt-link>
-          <ul class={ styles.list }>
-            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}` }>{ this.$t('header.index') }</nuxt-link></li>
-            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/work` }>{ this.$t('header.work') }</nuxt-link></li>
-            <li class={ styles.listItem }>
-              <nuxt-link to={ `/${this.$i18n.locale}/exhibitions/solo` }>{ this.$t('header.exhibitions') }</nuxt-link>
-              <ul class={ styles.sublist }>
-                <li><nuxt-link to={ `/${this.$i18n.locale}/exhibitions/solo` }>{ this.$t('header.solo') }</nuxt-link></li>
-                <li><nuxt-link to={ `/${this.$i18n.locale}/exhibitions/group` }>{ this.$t('header.group') }</nuxt-link></li>
-              </ul>
-            </li>
-            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/studio` }>{ this.$t('header.studio') }</nuxt-link></li>
-            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/about` }>{ this.$t('header.about') }</nuxt-link></li>
-          </ul>
           <div class={ styles.locale }>
             <span class={ this.$i18n.locale === 'en' ? styles.active : null } on-click={ _ => { this.route('en') } }>En</span>
             <span> / </span>
             <span class={ this.$i18n.locale === 'zh' ? styles.active : null } on-click={ _ => { this.route('zh') } }>中文</span>
           </div>
+          <ul class={ styles.list }>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}` }>{ this.$t('header.index') }</nuxt-link></li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/work` }>{ this.$t('header.work') }</nuxt-link></li>
+            <li
+              class={ styles.listItem }
+              on-mouseenter={ _ => { this.show = true } }
+              on-mouseleave={ _ => { this.show = false } }
+              on-touchstart={ _ => { this.show = true } }
+            >
+              <nuxt-link to={ `/${this.$i18n.locale}/exhibitions/solo` }>{ this.$t('header.exhibitions') }</nuxt-link>
+              <ul class={ `${styles.sublist} ${this.show ? 'show' : ''}` }>
+                <li on-click={ _ => { this.show = false } }><nuxt-link to={ `/${this.$i18n.locale}/exhibitions/solo` }>{ this.$t('header.solo') }</nuxt-link></li>
+                <li on-click={ _ => { this.show = false } }><nuxt-link to={ `/${this.$i18n.locale}/exhibitions/group` }>{ this.$t('header.group') }</nuxt-link></li>
+              </ul>
+            </li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/studio` }>{ this.$t('header.studio') }</nuxt-link></li>
+            <li class={ styles.listItem }><nuxt-link to={ `/${this.$i18n.locale}/about` }>{ this.$t('header.about') }</nuxt-link></li>
+          </ul>
         </div>
       </header>
     )

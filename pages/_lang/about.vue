@@ -11,11 +11,11 @@ export default class About extends Vue {
       <div class={ styles.about }>
         <div class="container">
           <div class="row">
-            <div class="col-4">
+            <div class="col-md-4">
               <img class={ styles.img } src="/images/about/about.jpg" />
             </div>
             <div class="offset-1"></div>
-            <div class="col-6">
+            <div class="col-md-6">
               <div class={ styles.name }>{ this.$t('about.name') }</div>
               <p>{ this.$t('about.description') }</p>
             </div>

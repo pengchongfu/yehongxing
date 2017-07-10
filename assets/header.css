@@ -1,16 +1,11 @@
 .header {
   height: 80px;
-  line-height: 80px;
-  position: fixed;
+  line-height: 40px;
+  position: relative;
   width: 100%;
   background-color: #fff;
   transition: all ease .5s;
   z-index: 10;
-}
-
-.small {
-  height: 60px;
-  line-height: 60px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,14 +18,15 @@
 
 .list {
   float: left;
+  display: flex;
+  width: 100%;
 }
 
 .listItem {
-  float: left;
-  padding: 0 25px;
+  padding: 0 15px;
   position: relative;
   text-align: center;
-  width: 120px;
+  width: 25%;
 }
 
 .listItem a {
@@ -56,7 +52,7 @@
   color: #000;
 }
 
-.listItem:hover .sublist {
+.sublist:global.show {
   visibility: visible;
   opacity: 1;
   margin-top: 0;
@@ -78,10 +74,32 @@
 
 .sublist li {
   line-height: 20px;
-  padding: 5px 25px;
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
 
 .sublist li:hover a {
   color: #000;
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: fixed;
+    line-height: 80px;
+    box-shadow: none;
+  }
+  .small {
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .list {
+    width: auto;
+  }
+  .listItem {
+    width: 120px;
+    padding: 0 25px;
+  }
+  .sublist li {
+    padding: 5px 25px;
+  }
 }

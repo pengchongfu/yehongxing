@@ -1,6 +1,12 @@
 .default {
-  min-height: calc(100vh - 61px);
+  min-height: calc(100vh - 91px);
   width: 100%;
   overflow-x: hidden;
-  padding-top: 100px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .default {
+    padding-top: 100px;
+  }
 }

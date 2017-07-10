@@ -18,12 +18,17 @@
 }
 
 .itemContent {
-  width: 600px;
   height: 120px;
   margin: auto;
   padding-top: 20px;
   overflow: hidden;
   transition: transform ease .6s;
+}
+
+@media (min-width: 768px) {
+  .itemContent {
+    width: 600px;
+  }
 }
 
 .itemImg {
