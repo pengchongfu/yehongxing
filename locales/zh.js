@@ -21,5 +21,8 @@ module.exports = {
   },
   words: {
     allTime: '所有时间'
+  },
+  notfound: {
+    prompt: '抱歉，您请求的页面不存在'
   }
 }

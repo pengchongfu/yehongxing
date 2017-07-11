@@ -21,5 +21,8 @@ module.exports = {
   },
   words: {
     allTime: 'All Time'
+  },
+  notfound: {
+    prompt: 'Sorry, we cannot find the page you requested'
   }
 }
