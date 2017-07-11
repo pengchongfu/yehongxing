@@ -56,6 +56,9 @@ export default class Detail extends Vue {
     properHeight -= Math.random() * 50
     this.height = properHeight
     this.width = width * properHeight / height
+    if (height === 0 || width === 0) {
+      setTimeout(this.resize, 500)
+    }
   }
   render () {
     const imgs = this.list.map((item, index) => {
