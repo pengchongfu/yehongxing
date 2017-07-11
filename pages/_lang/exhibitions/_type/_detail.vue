@@ -10,11 +10,14 @@ import listMap from '~data/exhibitions.js'
   mixins: [ WorkDetail ]
 })
 export default class Detail extends Vue {
-  meta = {}
-  getData () {
-    const typeArray = listMap[this.$route.params.type]
-    this.meta = typeArray[typeArray.length - this.$route.params.detail]
-    this.list = this.meta.images
+  asyncData ({params}) {
+    const typeArray = listMap[params.type]
+    const meta = typeArray[typeArray.length - params.detail]
+    const list = meta.images
+    return {
+      meta,
+      list
+    }
   }
   render () {
     let vnode = <div class={ styles.detailMeta }>

@@ -25,7 +25,7 @@ Object.keys(exhibitions).map(key => {
 basicRoute = basicRoute.concat(workRoutes, exhibitionsRoutes)
 
 var routes = []
-var locales = ['/', '/zh', '/en']
+var locales = ['/', '/zh']
 locales.map(locale => {
   routes = routes.concat(basicRoute.map(item => {
     return path.join(locale, item)

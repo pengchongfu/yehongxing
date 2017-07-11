@@ -38,18 +38,17 @@
   text-decoration: none;
 }
 
-.listItem a:global.nuxt-link-active {
-  color: #000;
-}
-
 .locale {
   float: right;
   cursor: pointer;
+}
+
+.locale a {
   color: #999;
 }
 
 .active {
-  color: #000;
+  color: #000 !important;
 }
 
 .sublist:global.show {

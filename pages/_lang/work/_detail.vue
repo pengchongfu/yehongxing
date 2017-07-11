@@ -12,7 +12,13 @@ import listMap from '~data/work.js'
 
 @Component
 export default class Detail extends Vue {
-  list = []
+  asyncData ({params}) {
+    return {
+      list: listMap[params.detail].map(item => {
+        return `/images/work/${params.detail}/${item}`
+      })
+    }
+  }
   currentIndex = 0
   visible = false
   handleModal (val) {
@@ -35,11 +41,6 @@ export default class Detail extends Vue {
     } else {
       this.currentIndex++
     }
-  }
-  getData () {
-    this.list = listMap[this.$route.params.detail].map(item => {
-      return `/images/work/${this.$route.params.detail}/${item}`
-    })
   }
   r (vnode) {
     const items = this.list.map((item, index) => {
@@ -77,9 +78,6 @@ export default class Detail extends Vue {
   }
   render () {
     return this.r()
-  }
-  created () {
-    this.getData()
   }
 }
 </script>
