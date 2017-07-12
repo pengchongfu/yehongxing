@@ -76,8 +76,8 @@ export default class Gallery extends Vue {
   }
   render () {
     return (
-      <div ref="gallery" class={ styles.gallery } style={ `height: ${this.height}px` }>
-        { this.$slots.default }
+      <div class={ styles.gallery }>
+        <div ref="gallery" class={ styles.galleryWrapper } style={ `height: ${this.height}px` }>{ this.$slots.default }</div>
         <div class={ styles.pre } on-click={ this.pre }>
           <i class="fa fa-angle-left" aria-hidden="true"></i>
         </div>

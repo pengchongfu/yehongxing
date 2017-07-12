@@ -1,6 +1,9 @@
 .gallery {
-  white-space: nowrap;
   position: relative;
+}
+
+.galleryWrapper {
+  white-space: nowrap;
   overflow: hidden;
 }
 
