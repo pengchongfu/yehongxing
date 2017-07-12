@@ -74,7 +74,16 @@ module.exports = {
       config.module.rules.push({
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          use: 'css-loader?modules&sourceMap',
+          use: ['css-loader?modules&sourceMap', {
+            loader: 'postcss-loader',
+            options: {
+              plugins: _ => [
+                require('autoprefixer')({
+                  browsers: ['last 3 versions']
+                })
+              ]
+            }
+          }],
           fallback: 'vue-style-loader?sourceMap'
         }),
         exclude: /(node_modules)/

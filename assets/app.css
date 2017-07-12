@@ -1,5 +1,6 @@
 html {
   -webkit-overflow-scrolling: touch;
+  user-select: none;
 }
 
 body {
