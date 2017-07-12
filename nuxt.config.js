@@ -1,4 +1,5 @@
 var path = require('path')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var work = require('./data/work')
 var exhibitions = require('./data/exhibitions')
 
@@ -63,14 +64,25 @@ module.exports = {
       for (var i = 0; i < config.module.rules.length; i++){
         if (config.module.rules[i].test.source === "\\.css$") {
           config.module.rules[i].include = /(node_modules)/
+          config.module.rules[i].use = ExtractTextPlugin.extract({
+            use: 'css-loader?sourceMap',
+            fallback: 'vue-style-loader?sourceMap'
+          })
           break;
         }
       }
       config.module.rules.push({
         test: /\.css$/,
-        use: [ 'vue-style-loader', 'css-loader?modules' ],
+        use: ExtractTextPlugin.extract({
+          use: 'css-loader?modules&sourceMap',
+          fallback: 'vue-style-loader?sourceMap'
+        }),
         exclude: /(node_modules)/
       })
+      config.plugins.push(new ExtractTextPlugin({
+        filename: 'common.[chunkhash].css',
+        allChunks: true
+      }))
       config.resolve.alias['nuxt-class-component'] = '~plugins/nuxt-class-component'
       config.resolve.alias['~data'] = path.join(__dirname, 'data')
       config.resolve.alias['~utils'] = path.join(__dirname, 'utils')
