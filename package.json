@@ -19,7 +19,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "sharp": "node sharp.js"
+    "sharp": "node sharp.js",
+    "deploy": "rsync -a dist/ root@yehongxingart.com:/www/ --exclude=.*"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
