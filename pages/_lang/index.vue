@@ -24,7 +24,7 @@ const list = [
   }
 })
 export default class Index extends Vue {
-  height = 400
+  height = 300
   render () {
     return (
       <div class={ styles.index }>

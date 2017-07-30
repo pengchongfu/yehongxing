@@ -1,2 +1,17 @@
 .news {
 }
+
+.item {
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 800px;
+}
+
+.line {
+  height: 1px;
+  background-color: #808080;
+  margin: 50px 0;
+}
