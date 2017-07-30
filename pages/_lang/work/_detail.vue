@@ -5,7 +5,7 @@ import Component from 'nuxt-class-component'
 import styles from '~assets/work.css'
 import Gallery from '~components/Gallery'
 import GalleryItem from '~components/GalleryItem'
-import Modal from '~components/Modal'
+import ImageModal from '~components/ImageModal'
 import ImageGallery from '~components/ImageGallery'
 
 import listMap from '~data/work.js'
@@ -60,17 +60,12 @@ export default class Detail extends Vue {
           { items }
           </Gallery>
           {
-            this.visible ? <Modal on-change={ this.handleModal }>
-              <div class={ styles.slider }>
-                <img src={ this.list[this.currentIndex] } />
-                <div class={ styles.pre } on-click={ this.pre }>
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                </div>
-                <div class={ styles.next } on-click={ this.next }>
-                  <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </div>
-              </div>
-            </Modal> : null
+            this.visible ? <ImageModal
+              src={ this.list[this.currentIndex] }
+              on-pre={ this.pre }
+              on-next={ this.next }
+              on-change={ this.handleModal }
+            /> : null
           }
         </div>
       </div>
