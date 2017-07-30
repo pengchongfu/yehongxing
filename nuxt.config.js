@@ -8,6 +8,8 @@ var basicRoute = [
   'work',
   'studio',
   'about',
+  'news',
+  'exhibitions'
 ]
 
 var workRoutes = []
@@ -16,12 +18,9 @@ Object.keys(work).map(key => {
 })
 
 var exhibitionsRoutes = []
-Object.keys(exhibitions).map(key => {
-  exhibitionsRoutes.push(path.join('/exhibitions', key))
-  for (var i = 1; i <= exhibitions[key].length; i++) {
-    exhibitionsRoutes.push(path.join('/exhibitions', key, String(i)))
-  }
-})
+for (var i = 1; i <= exhibitions.length; i++) {
+  exhibitionsRoutes.push(path.join('/exhibitions', String(i)))
+}
 
 basicRoute = basicRoute.concat(workRoutes, exhibitionsRoutes)
 
@@ -39,8 +38,7 @@ module.exports = {
   */
   head: {
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+      { charset: 'utf-8' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

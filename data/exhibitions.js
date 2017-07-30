@@ -1,4 +1,4 @@
-const solo = [
+const exhibitions = [
   {
     time: 2017,
     name: {
@@ -13,16 +13,40 @@ const solo = [
       zh: '北京',
       en: 'Beijing'
     },
-    image: '/images/exhibitions/1.jpg',
+    image: '/images/exhibitions/201704.jpg',
     images: [
-      '/images/exhibitions/1.jpg',
-      '/images/exhibitions/2.jpg',
-      '/images/exhibitions/3.jpg',
-      '/images/exhibitions/4.jpg',
-      '/images/exhibitions/4.jpg',
-      '/images/exhibitions/3.jpg',
-      '/images/exhibitions/2.jpg',
-      '/images/exhibitions/1.jpg'
+      '/images/exhibitions/201704.jpg',
+      '/images/exhibitions/201705.jpg',
+      '/images/exhibitions/201706.jpg',
+      '/images/exhibitions/201708.jpg',
+      '/images/exhibitions/201709.jpg',
+      '/images/exhibitions/201710.jpg'
+    ]
+  },
+  {
+    time: 2017,
+    name: {
+      zh: '苹果',
+      en: 'Apple'
+    },
+    place: {
+      zh: '中国',
+      en: 'China'
+    },
+    city: {
+      zh: '',
+      en: ''
+    },
+    image: '/images/exhibitions/201701c.jpg',
+    images: [
+      '/images/exhibitions/201701.jpg',
+      '/images/exhibitions/201701a.jpg',
+      '/images/exhibitions/201701b.jpg',
+      '/images/exhibitions/201701c.jpg',
+      '/images/exhibitions/201701d.jpg',
+      '/images/exhibitions/201701e.jpg',
+      '/images/exhibitions/201702.jpg',
+      '/images/exhibitions/201703.jpg'
     ]
   },
   {
@@ -39,25 +63,41 @@ const solo = [
       zh: '上海',
       en: 'Shanghai'
     },
-    image: '/images/exhibitions/2.jpg',
-    images: []
+    image: '/images/exhibitions/201610.jpg',
+    images: [
+      '/images/exhibitions/201610.jpg',
+      '/images/exhibitions/201611.jpg',
+      '/images/exhibitions/201612.jpg',
+      '/images/exhibitions/201613.jpg',
+      '/images/exhibitions/201614.jpg'
+    ]
   },
   {
-    time: 2015,
+    time: 2016,
     name: {
-      zh: '耀眼的世界 叶红杏个展',
-      en: 'The Dazzling World Of Ye Hongxing'
+      zh: '曼陀罗',
+      en: 'Prajñāpāramitā'
     },
     place: {
-      zh: 'ArtLexing',
-      en: 'ArtLexing'
+      en: 'east',
+      zh: 'east'
     },
     city: {
       zh: '迈阿密',
       en: 'Miami'
     },
-    image: '/images/exhibitions/3.jpg',
-    images: []
+    image: '/images/exhibitions/201601.jpg',
+    images: [
+      '/images/exhibitions/201601.jpg',
+      '/images/exhibitions/201602.jpg',
+      '/images/exhibitions/201603.jpg',
+      '/images/exhibitions/201604.jpg',
+      '/images/exhibitions/201605.jpg',
+      '/images/exhibitions/201606.jpg',
+      '/images/exhibitions/201607.jpg',
+      '/images/exhibitions/201608.jpg',
+      '/images/exhibitions/201609.jpg'
+    ]
   },
   {
     time: 2014,
@@ -73,8 +113,14 @@ const solo = [
       zh: '上海',
       en: 'Shanghai'
     },
-    image: '/images/exhibitions/4.jpg',
-    images: []
+    image: '/images/exhibitions/201401.jpg',
+    images: [
+      '/images/exhibitions/201401.jpg',
+      '/images/exhibitions/201401a.jpg',
+      '/images/exhibitions/201402.jpg',
+      '/images/exhibitions/201403.jpg',
+      '/images/exhibitions/201404.jpg'
+    ]
   },
   {
     time: 2014,
@@ -83,15 +129,20 @@ const solo = [
       en: 'Ye Hongxing - Solo Exhibition'
     },
     place: {
-      zh: 'Zee Stone 画廊',
-      en: 'Zee Stone Gallery'
+      zh: 'Lux Art Institute',
+      en: 'Lux Art Institute'
     },
     city: {
-      zh: '香港',
-      en: 'HongKong'
+      zh: '圣迭戈',
+      en: 'San Diego'
     },
-    image: '/images/exhibitions/1.jpg',
-    images: []
+    image: '/images/exhibitions/201409.jpg',
+    images: [
+      '/images/exhibitions/201406.jpg',
+      '/images/exhibitions/201407.jpg',
+      '/images/exhibitions/201408.jpg',
+      '/images/exhibitions/201409.jpg'
+    ]
   },
   {
     time: 2013,
@@ -107,14 +158,17 @@ const solo = [
       zh: '伦敦',
       en: 'London'
     },
-    image: '/images/exhibitions/2.jpg',
-    images: []
+    image: '/images/exhibitions/201301.jpg',
+    images: [
+      '/images/exhibitions/201301.jpg',
+      '/images/exhibitions/201302.jpg'
+    ]
   },
   {
     time: 2013,
     name: {
-      zh: '叶红杏 秦伟鸿 双个展',
-      en: 'Ye Hongxing &amp; Quin Weihong'
+      zh: '炫彩未来 Christian Louboutin - 叶红杏个展',
+      en: 'A Dazzling Future, Christian Louboutin - Ye Hongxing'
     },
     place: {
       zh: 'Christian Louboutin',
@@ -124,49 +178,32 @@ const solo = [
       zh: '香港',
       en: 'HongKong'
     },
-    image: '/images/exhibitions/3.jpg',
-    images: []
+    image: '/images/exhibitions/2012.jpg',
+    images: [
+      '/images/exhibitions/2012.jpg',
+      '/images/exhibitions/201303.jpg',
+      '/images/exhibitions/201304.jpg'
+    ]
   },
   {
-    time: 2013,
+    time: 2012,
     name: {
-      zh: '天堂之城－叶红杏个展',
-      en: 'Paradise City Ye Hongxing - Solo Exhibition'
+      zh: '现代乌托邦－叶红杏个展',
+      en: 'The Modern Utopia - Ye Hongxing Solo Exhibition'
     },
     place: {
-      zh: 'Art+shanghai 画廊',
-      en: 'Art＋Shanghai'
+      zh: 'Scream画廊',
+      en: 'Scream'
     },
     city: {
-      zh: '上海',
-      en: 'Shanghai'
+      zh: '伦敦',
+      en: 'London'
     },
-    image: '/images/exhibitions/4.jpg',
-    images: []
+    image: '/images/exhibitions/201202.jpg',
+    images: [
+      '/images/exhibitions/201202.jpg'
+    ]
   }
 ]
 
-const group = [
-  {
-    time: 2017,
-    name: {
-      zh: 'Art Central 艺术博览会',
-      en: 'Art Central'
-    },
-    place: {
-      zh: 'Art＋Shanghai',
-      en: 'Art＋Shanghai'
-    },
-    city: {
-      zh: '香港',
-      en: 'HongKong'
-    },
-    image: '/images/exhibitions/1.jpg',
-    images: []
-  }
-]
-
-module.exports = {
-  solo,
-  group
-}
+module.exports = exhibitions

@@ -23,7 +23,7 @@ export default class Carousel extends Vue {
   start () {
     this.timer = setInterval(_ => {
       this.activeIndex = (this.activeIndex + 1) % this.items.length
-    }, 3000)
+    }, 5000)
   }
   pause () {
     clearInterval(this.timer)

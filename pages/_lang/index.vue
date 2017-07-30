@@ -12,9 +12,10 @@ import Carousel from '~components/Carousel'
 import CarouselItem from '~components/CarouselItem'
 
 const list = [
-  '/images/index/1.jpg',
-  '/images/index/2.jpg',
-  '/images/index/3.jpg'
+  '/images/index/01.jpg',
+  '/images/index/02.jpg',
+  '/images/index/03.jpg',
+  '/images/index/04.jpg'
 ]
 
 @Component({

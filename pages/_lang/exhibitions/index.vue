@@ -4,14 +4,13 @@ import Component from 'nuxt-class-component'
 
 import styles from '~assets/exhibitions.css'
 import data from '~data/exhibitions.js'
-import Picker from '~components/Picker'
 
 @Component
 export default class Exhibitions extends Vue {
   selected = ''
   data () {
     return {
-      list: data[this.$route.params.type]
+      list: data
     }
   }
   get options () {
@@ -49,7 +48,7 @@ export default class Exhibitions extends Vue {
   render () {
     const items = this.listShow.map((item) => {
       return (
-        <nuxt-link to={ {name: 'lang-exhibitions-type-detail', params: {lang: this.$i18n.locale, type: this.$route.params.type, detail: this.list.length - this.list.indexOf(item)}} }>
+        <nuxt-link to={ {name: 'lang-exhibitions-detail', params: {lang: this.$i18n.locale, detail: this.list.length - this.list.indexOf(item)}} }>
           <div class={ styles.item }>
             <div class={ styles.itemContent }>
               <img class={ styles.itemImg } src={ item.image }/>
@@ -68,12 +67,6 @@ export default class Exhibitions extends Vue {
     return (
       <div class={ styles.exhibitions }>
         <div class="container">
-          <Picker
-          value={ this.selected }
-          options={ this.options }
-          on-change={ val => { this.selected = val } }
-          />
-          { this.num }
           { items }
         </div>
       </div>

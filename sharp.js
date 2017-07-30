@@ -31,7 +31,7 @@ const mkdir = (dir) => {
 const handleJpg = (p) => {
   const s = sharp(p)
   s.metadata().then(data => {
-    const dir = p.replace('raw_images', 'images')
+    const dir = p.replace('raw_images', 'static/images')
     mkdir(path.dirname(dir))
     if (data.width > 1000) {
       s.resize(1000)
@@ -42,6 +42,6 @@ const handleJpg = (p) => {
   })
 }
 
-const root = './static/raw_images'
+const root = './raw_images'
 const jpgs = getAllJpgs(root)
 jpgs.forEach(handleJpg)

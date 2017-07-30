@@ -1,6 +1,7 @@
 <script>
 import Header from '~components/Header'
 import Footer from '~components/Footer'
+import Nav from '~components/Nav'
 
 import styles from '~assets/default.css'
 
@@ -17,7 +18,10 @@ export default {
     return (
       <div>
         <Header/>
-        <nuxt class={ styles.default }/>
+        <div class={ 'container' + ' ' + styles.row + ' ' + styles.content }>
+          <Nav/>
+          <nuxt class={ styles.nuxt }/>
+        </div>
         <Footer/>
       </div>
     )

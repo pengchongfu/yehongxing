@@ -1,5 +1,13 @@
 .studio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+.item {
+  width: 33%;
+  display: inline-block;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.img {
+  height: 200px;
 }

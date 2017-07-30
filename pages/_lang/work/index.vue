@@ -10,22 +10,16 @@ export default class Work extends Vue {
   render () {
     const items = Object.keys(work).map(item => {
       return (
-        <div class="col-md-4">
-          <div class={ styles.item }>
-            <nuxt-link to={ `/${this.$i18n.locale}/work/${item}` }>
-              <div class={ styles[item] }></div>
-              <div class={ styles.info }>{ this.$t(`work.${item}`) }</div>
-            </nuxt-link>
+          <div>
+              <img src={ `/images/work/${item}/${work[item][0]}` }/>
+              <div>{ this.$t(`work.${item}`) }</div>
           </div>
-        </div>
       )
     })
     return (
       <div class={ styles.work }>
         <div class="container">
-          <div class="row">
-            { items }
-          </div>
+          { items }
         </div>
       </div>
     )

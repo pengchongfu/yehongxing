@@ -11,7 +11,7 @@ import listMap from '~data/exhibitions.js'
 })
 export default class Detail extends Vue {
   asyncData ({params}) {
-    const typeArray = listMap[params.type]
+    const typeArray = listMap
     const meta = typeArray[typeArray.length - params.detail]
     const list = meta.images
     return {
@@ -22,10 +22,10 @@ export default class Detail extends Vue {
   render () {
     let vnode = <div class={ styles.detailMeta }>
       <div class={ styles.detailName }>{ this.meta.name[this.$i18n.locale] }</div>
-      <div class={ styles.detailTime }>{ this.meta.time }</div>
-      <div class={ styles.detailPlace }>
+      <span class={ styles.detailPlace }>
         <span>{ this.meta.place[this.$i18n.locale] }</span> <span>{ this.meta.city[this.$i18n.locale] }</span>
-      </div>
+      </span>
+      <span class={ styles.detailTime }>{ this.meta.time }</span>
     </div>
     return this.r(vnode)
   }

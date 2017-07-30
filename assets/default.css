@@ -1,12 +1,20 @@
-.default {
-  min-height: calc(100vh - 91px);
-  width: 100%;
-  overflow-x: hidden;
-  margin-bottom: 30px;
+.content {
+  min-height: calc(100vh - 61px);
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .default {
-    padding-top: 100px;
-  }
+.nuxt {
+  float:left;
+  width: 90%;
+  overflow: hidden;
+}
+
+.row::before, .row::after {
+  content: '';
+  display: table;
+}
+
+.row::after {
+  clear: both;
 }

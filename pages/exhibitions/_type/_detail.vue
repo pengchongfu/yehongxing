@@ -1,4 +1,0 @@
-<script>
-import Detail from '~pages/_lang/exhibitions/_type/_detail'
-export default Detail
-</script>

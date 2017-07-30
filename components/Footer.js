@@ -13,8 +13,7 @@ export default class Footer extends Vue {
             ©2017 { this.$t('about.name') }
           </div>
           <div class={ styles.icons }>
-            <i class={ `fa fa-facebook ${styles.icon}` } aria-hidden="true"></i>
-            <i class={ `fa fa-twitter ${styles.icon}` } aria-hidden="true"></i>
+            <a href="https://www.facebook.com/profile.php?id=100004118880593" target="_blank"><i class={ `fa fa-facebook ${styles.icon}` } aria-hidden="true"></i></a>
           </div>
         </div>
       </footer>

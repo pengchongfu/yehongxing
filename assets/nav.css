@@ -1,0 +1,21 @@
+.nav {
+  width: 10%;
+  float: left;
+}
+
+.listItem {
+  height: 50px;
+  font-size: 14px;
+}
+
+.listItem a {
+  color: #999;
+}
+
+.listItem:hover > a {
+  color: #000;
+}
+
+.active {
+  color: #000 !important;
+}
