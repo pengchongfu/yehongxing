@@ -1,6 +1,5 @@
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var work = require('./data/work')
 var exhibitions = require('./data/exhibitions')
 
 var basicRoute = [
@@ -12,17 +11,12 @@ var basicRoute = [
   'exhibitions'
 ]
 
-var workRoutes = []
-Object.keys(work).map(key => {
-  workRoutes.push(path.join('/work', key))
-})
-
 var exhibitionsRoutes = []
 for (var i = 1; i <= exhibitions.length; i++) {
   exhibitionsRoutes.push(path.join('/exhibitions', String(i)))
 }
 
-basicRoute = basicRoute.concat(workRoutes, exhibitionsRoutes)
+basicRoute = basicRoute.concat(exhibitionsRoutes)
 
 var routes = []
 var locales = ['/', '/zh']
