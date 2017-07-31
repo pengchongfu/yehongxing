@@ -1,6 +1,5 @@
 html {
   -webkit-overflow-scrolling: touch;
-  user-select: none;
 }
 
 body {
@@ -21,10 +20,12 @@ a:hover, a:focus {
 
 p {
   line-height: 2;
+  margin-bottom: 0;
 }
 
 ul {
   padding: 0;
+  margin-bottom: 0;
 }
 
 li {

@@ -11,3 +11,31 @@
   font-size: 20px;
   line-height: 2;
 }
+
+.item {
+  line-height: 1.5;
+}
+
+.li {
+  padding-left: 1em;
+  position: relative;
+  margin-bottom: 0.8em;
+}
+
+.li:before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+.city {
+  margin-left: 1em;
+}
+
+.title {
+  margin-bottom: 1em;
+}
+
+.panel {
+  margin-top: 2em;
+}

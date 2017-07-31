@@ -15,4 +15,5 @@
 .img {
   width: 100%; 
   cursor: pointer;
+  vertical-align: bottom;
 }

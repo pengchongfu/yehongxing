@@ -12,7 +12,9 @@ module.exports = {
   },
   about: {
     name: 'Ye Hongxing',
-    description: '1972 Born in Guangxi, 1995 Graduated from Art Department of Educational Academy in Guilin, Guangxi, 1998 Graduated from Printing Department, Central Fine Art Academy, Beijing.'
+    description: '1972 Born in Guangxi, 1995 Graduated from Art Department of Educational Academy in Guilin, Guangxi, 1998 Graduated from Printing Department, Central Fine Art Academy, Beijing.',
+    solo: 'Solo Exhibition',
+    group: 'Group Exhibition & Air Fair'
   },
   work: {
     oil: 'Oil',

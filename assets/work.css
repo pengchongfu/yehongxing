@@ -2,4 +2,5 @@
 }
 
 .detail {
+  user-select: none;
 }
