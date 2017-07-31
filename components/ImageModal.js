@@ -15,6 +15,7 @@ export default class ImageModal extends Vue {
       <Modal on-change={ v => { this.$emit('change', v) } }>
         <div class={ styles.slider }>
           <img src={ this.src } />
+          { this.$slots.default }
           <div class={ styles.pre } on-click={ _ => { this.$emit('pre') } }>
             <i class="fa fa-angle-left" aria-hidden="true"></i>
           </div>

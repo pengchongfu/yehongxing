@@ -18,7 +18,8 @@ module.exports = {
   },
   works: {
     oil: '油画',
-    sculpture: '雕塑'
+    sculpture: '大理石雕塑',
+    mixed: '布面综合材料'
   },
   words: {
     allTime: '所有时间'

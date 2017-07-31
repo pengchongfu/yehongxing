@@ -17,8 +17,9 @@ module.exports = {
     group: 'Group Exhibition & Air Fair'
   },
   works: {
-    oil: 'Oil',
-    sculpture: 'Sculpture'
+    oil: 'Oil and Acrylie on Canvas',
+    sculpture: 'Marlbe Sculpture',
+    mixed: 'Mixed media on canvas'
   },
   words: {
     allTime: 'All Time'

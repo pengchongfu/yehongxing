@@ -1,2 +1,53 @@
 .works {
+  user-select: none;
+  text-align: center;
+}
+
+.item {
+  margin-bottom: 100px;
+  background-color: #fafafa;
+  display: inline-block;
+  font-size: 16px;
+  color: #777;
+  line-height: 2;
+  overflow: hidden;
+  text-align: initial;
+}
+
+.imgWrapper {
+  text-align: center;
+  width: 600px;
+  height: 400px;
+}
+
+.imgWrapper img {
+  height: 100%;
+}
+
+.bar {
+  background-color: #ffffff;
+}
+
+.bar :global .fa {
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.pagination {
+  float: right;
+}
+
+.page {
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+}
+
+.description {
+  position: absolute;
+  bottom: 5%;
+  color: #ccc;
+  font-size: 16px;
 }
