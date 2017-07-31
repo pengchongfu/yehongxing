@@ -4,7 +4,7 @@ var exhibitions = require('./data/exhibitions')
 
 var basicRoute = [
   '',
-  'work',
+  'works',
   'studio',
   'about',
   'news',

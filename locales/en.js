@@ -4,7 +4,7 @@ module.exports = {
   },
   header: {
     index: 'Home',
-    work: 'Works',
+    works: 'Works',
     exhibitions: 'Exhibitions',
     studio: 'Studio',
     about: 'About',
@@ -16,7 +16,7 @@ module.exports = {
     solo: 'Solo Exhibition',
     group: 'Group Exhibition & Air Fair'
   },
-  work: {
+  works: {
     oil: 'Oil',
     sculpture: 'Sculpture'
   },

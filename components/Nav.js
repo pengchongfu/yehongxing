@@ -13,7 +13,7 @@ export default class Nav extends Vue {
             <nuxt-link class={{[styles.active]: this.$route.fullPath === '/' || this.$route.fullPath === '/zh'}} to={ `/${this.$i18n.locale}` }>{ this.$t('header.index') }</nuxt-link>
           </li>
           <li class={ styles.listItem }>
-            <nuxt-link class={{[styles.active]: this.$route.fullPath.indexOf('work') !== -1}} to={ `/${this.$i18n.locale}/work` }>{ this.$t('header.work') }</nuxt-link>
+            <nuxt-link class={{[styles.active]: this.$route.fullPath.indexOf('works') !== -1}} to={ `/${this.$i18n.locale}/works` }>{ this.$t('header.works') }</nuxt-link>
           </li>
           <li class={ styles.listItem }
           >

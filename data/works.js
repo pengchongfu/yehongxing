@@ -1,5 +1,5 @@
 const oil = [
-  '1.jpg',
+  '/images/works.jpg',
   '2.jpg'
 ]
 

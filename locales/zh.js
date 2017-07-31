@@ -4,7 +4,7 @@ module.exports = {
   },
   header: {
     index: '主页',
-    work: '作品',
+    works: '作品',
     exhibitions: '展览',
     studio: '工作室',
     about: '关于',
@@ -16,7 +16,7 @@ module.exports = {
     solo: '个展',
     group: '联展及艺术博览会'
   },
-  work: {
+  works: {
     oil: '油画',
     sculpture: '雕塑'
   },
