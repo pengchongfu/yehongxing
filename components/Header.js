@@ -8,7 +8,7 @@ export default class Header extends Vue {
   small = false
   show = false
   onscroll () {
-    if (document.body.scrollTop > 80) {
+    if ((document.documentElement.scrollTop || document.body.scrollTop) > 80) {
       this.small = true
     } else {
       this.small = false
