@@ -15,11 +15,16 @@ export default class Header extends Vue {
     }
   }
   get routeEn () {
+    let route
     if (this.$i18n.locale === 'en') {
-      return this.$route.fullPath
+      route = this.$route.fullPath
     } else {
-      return this.$route.fullPath.replace(/^\/zh/, '')
+      route = this.$route.fullPath.replace(/^\/zh/, '')
     }
+    if (route === '') {
+      route = '/'
+    }
+    return route
   }
   get routeZh () {
     if (this.$i18n.locale === 'zh') {
