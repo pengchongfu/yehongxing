@@ -55,7 +55,7 @@ export default class Detail extends Vue {
     }
     properHeight = height
     while (properHeight >= this.h) {
-      properHeight -= this.h / 2
+      properHeight -= this.h / 4
     }
     properHeight -= Math.random() * 50
     this.height = properHeight

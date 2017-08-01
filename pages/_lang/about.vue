@@ -14,7 +14,7 @@ function generateList (h, items) {
         { item.exhibitions.map(exhibition => {
           return (
             <li class={ styles.li }>
-              <div>{ exhibition.name[this.$i18n.locale] }</div>
+              <span class={ styles.exhibitionName }>{ exhibition.name[this.$i18n.locale] }</span>
               <span>{ exhibition.place[this.$i18n.locale] }</span>
               <span class={ exhibition.place[this.$i18n.locale] ? styles.city : null }>{ exhibition.city[this.$i18n.locale] }</span>
             </li>
@@ -35,7 +35,7 @@ export default class About extends Vue {
       <div class={ styles.about }>
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
               <div class={ styles.name }>{ this.$t('about.name') }</div>
               <p>{ this.$t('about.description') }</p>
               <div class={ styles.panel }>
@@ -47,9 +47,12 @@ export default class About extends Vue {
                 { groupExhibitions }
               </div>
             </div>
-            <div class="offset-1"></div>
             <div class="col-md-4">
               <img class={ styles.img } src="/images/about/about.jpg" />
+              <div class={ styles.mail }>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <a href="mailto:yehongxing2013@163.com">yehongxing2013@163.com</a>
+              </div>
             </div>
           </div>
         </div>
