@@ -9,7 +9,7 @@ function generateList (h, items) {
   return items.map(item => {
     return (
       <div class={ styles.item }>
-        <div>{ item.time }</div>
+        <div class={ styles.time }>{ item.time }</div>
         <ul>
         { item.exhibitions.map(exhibition => {
           return (
