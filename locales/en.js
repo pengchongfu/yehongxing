@@ -18,7 +18,7 @@ module.exports = {
   },
   works: {
     oil: 'Oil and Acrylie on Canvas',
-    sculpture: 'Marlbe Sculpture',
+    sculpture: 'Marble Sculpture',
     mixed: 'Mixed media on canvas'
   },
   words: {
