@@ -85,13 +85,5 @@ export default class Works extends Vue {
       </div>
     )
   }
-  mounted () {
-    Object.keys(works).map(item => {
-      works[item].map(src => {
-        const img = new Image()
-        img.src = src
-      })
-    })
-  }
 }
 </script>
